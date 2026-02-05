@@ -1,0 +1,17 @@
+<h2>{{heading}}</h2>
+
+<div class="mb-3">
+  {{{formhtml}}}
+</div>
+
+{{#hasresults}}
+  {{> local_dbapis/search_results }}
+{{/hasresults}}
+
+{{^hasresults}}
+  {{#searched}}
+    <div class="border p-3 my-3">
+      <p>{{noresults}}</p>
+    </div>
+  {{/searched}}
+{{/hasresults}}
